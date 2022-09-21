@@ -11,10 +11,20 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor="#38a69d" barStyle="light-content" />
       <Stack.Navigator>
         <Stack.Screen
-        name="welcone" component={Welcone} />
-        <Stack.Screen name="login" component={Login} />
+        name="welcone"
+        component={Welcone} 
+        options={{headerShown: false}}
+        />
+
+        <Stack.Screen 
+        name="login" 
+        component={Login} 
+        options={{headerShown: false}}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
